@@ -31,4 +31,9 @@ public class LOLController {
         return rcService.getChampionsByName(name);
     }
 
+    @PutMapping("/Champions")
+    public void updateChampion(@RequestBody Champion champ){
+        rcService.updateChampion(champ);
+    }
+
 }
