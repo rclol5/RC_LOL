@@ -31,4 +31,14 @@ public class RCService {
 
         return null;
     }
+
+    public void updateChampion(Champion champ){
+        for(int i = 0; i < ChampionList.size(); i++){
+            Champion target = ChampionList.get(i);
+            if(target.getName().equals(champ.getName())){
+                target.setID(champ.getID());
+                break;
+            }
+        }
+    }
 }
