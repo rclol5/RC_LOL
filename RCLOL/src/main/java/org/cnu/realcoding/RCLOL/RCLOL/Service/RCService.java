@@ -20,4 +20,15 @@ public class RCService {
     public List<Champion> getAllChampions(){
         return ChampionList;
     }
+
+    public Champion getChampionsByName(String name){
+        for (int i = 0; i < ChampionList.size(); i++){
+            Champion target = ChampionList.get(i);
+            if(target.getName().equals(name)){
+                return target;
+            }
+        }
+
+        return null;
+    }
 }
