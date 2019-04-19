@@ -11,4 +11,9 @@ import java.util.List;
 public class RCService {
 
     private List<Champion> ChampionList = new ArrayList<>();
+
+
+    public void insertChampion(Champion champ){
+        ChampionList.add(champ);
+    }
 }
