@@ -16,4 +16,8 @@ public class RCService {
     public void insertChampion(Champion champ){
         ChampionList.add(champ);
     }
+
+    public List<Champion> getAllChampions(){
+        return ChampionList;
+    }
 }
