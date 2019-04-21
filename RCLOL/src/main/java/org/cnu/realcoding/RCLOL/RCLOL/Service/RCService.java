@@ -41,4 +41,14 @@ public class RCService {
             }
         }
     }
+
+    public void removeChampion(String name){
+        for(int i = 0; i < ChampionList.size(); i++){
+            Champion target = ChampionList.get(i);
+            if(target.getName().equals(name)){
+                ChampionList.remove(target);
+                break;
+            }
+        }
+    }
 }
