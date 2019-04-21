@@ -34,7 +34,7 @@ public class LOLController {
     @PutMapping("/Champions")
     public void updateChampion(@RequestBody Champion champ){
         rcService.updateChampion(champ);
-    }@
+    }
 
     @DeleteMapping("/Champions")
     public void removeChampion(@RequestParam String name){
