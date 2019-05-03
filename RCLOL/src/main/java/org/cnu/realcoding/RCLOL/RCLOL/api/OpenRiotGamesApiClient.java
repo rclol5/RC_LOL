@@ -13,14 +13,16 @@ public class OpenRiotGamesApiClient {
     //
     private final String apiKey = "RGAPI-9a8faed0-e79b-4cea-90d6-91525c040d87";
     private final String requestUrl = "https://kr.api.riotgames.com/lol/summoner/v4/summoners/by-name/{summonerName}?api_key={apiKey}";
-    private final String requstSummoner = "  https://kr.api.riotgames.com/lol/league/v4/positions/by-summoner/{{encryptedSummonerId}}?api_key={apiKey}";
+    private final String requstSummoner = "https://kr.api.riotgames.com/lol/league/v4/positions/by-summoner/{{encryptedSummonerId}}?api_key={apiKey}";
 
     public CurrentSummoner getCurrentSummoner(String summonerName) {
-        CurrentSummoner currentsummoner = restTemplate.exchange(requestUrl, HttpMethod.GET, null, CurrentSummoner.class, summonerName, apiKey)
+        CurrentSummoner currentsummonerID = restTemplate.exchange(requestUrl, HttpMethod.GET, null, CurrentSummoner.class, summonerName, apiKey)
                 .getBody();
-        return currentsummoner;
+        return currentsummonerID;
         //api
     }
+
+
 
     //incript ㅇㅏ이디
     //current summoner받을 그릇 만들고
