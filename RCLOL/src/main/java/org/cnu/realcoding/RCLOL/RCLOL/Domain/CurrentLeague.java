@@ -1,5 +1,8 @@
 package org.cnu.realcoding.RCLOL.RCLOL.Domain;
 
+import lombok.Data;
+
+@Data
 public class CurrentLeague {
 
     private String queueType;
@@ -18,7 +21,7 @@ public class CurrentLeague {
     private int leaguePoints;
 
 
-
+    @Data
     public class MiniseriesDTO{
         private String progress;
         private int losses;
